@@ -1,3 +1,6 @@
+"""Faça um Programa que peça as 4 notas bimestrais e mostre a média."""
+
+
 def media(*args):
     valor = 0
     contador = 0
