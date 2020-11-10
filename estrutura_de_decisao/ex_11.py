@@ -18,14 +18,13 @@ def aumento_salarial(valor):
     valor = float(valor)
     print(f'Salário antigo: R$ {valor}')
 
-    if valor <= 280.0:
-        ajuste = .2
-    elif valor <= 700.0:
-        ajuste = .15
-    elif valor <= 1_500.0:
-        ajuste = .1
-    else:
-        ajuste = .05
+    taxa_ajuste = {1500: 0.05, 700: 0.1, 280: 0.15}
+    ajuste = 0.2
+
+    for salario in taxa_ajuste:
+        if valor > salario:
+            ajuste = taxa_ajuste[salario]
+            break
 
     print(f'Percentual de ajuste aplicado: {ajuste * 100}%')
     print(f'Valor do aumento salarial: R$ {valor * ajuste}')
