@@ -4,8 +4,11 @@
 import math
 
 
-def calcular_area(s):
+def area_circulo(s):
+    """Retorna o valor da área de um círculo"""
+
     return 0 if s == '' else math.pi * float(s) ** 2
 
 
-print(f'A área do círculo é: {calcular_area(input("Digite o valor do raio: "))}')
+if __name__ == '__main__':
+    print(f'A área do círculo é: {area_circulo(input("Digite o valor do raio: "))}')

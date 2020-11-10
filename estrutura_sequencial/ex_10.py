@@ -2,18 +2,7 @@
 
 
 def celsius_to_fahrenheit(s):
-    """Transforma a temperatura Celsius (°C) em  Fahrenheit (°F)
-
-    >>> celsius_to_fahrenheit(-40)
-    -40.0
-    >>> celsius_to_fahrenheit(0)
-    32.0
-    >>> celsius_to_fahrenheit(30)
-    86.0
-
-    :param s: string
-    :return: float
-    """
+    """Transforma a temperatura Celsius (°C) em  Fahrenheit (°F)"""
 
     return 32 + ((9 * float(s)) / 5)
 

@@ -20,21 +20,7 @@ def total_de_latas_e_ou_galoes_de_tinta(metragem):
      Considerando que cada lata de tinta contém 18 litros.
      Considerando que cada galão de tinta contém 3.6 litros.
      Considerando que cada lata custa R$ 80.0
-     Considerando que cada lata custa R$ 25.0
-
-    >>> total_de_latas_e_ou_galoes_de_tinta(500.0)
-    Metragem informada: 500.0
-    Será necessário 5 lata(s) de tinta e preço total é de R$ 400.0
-    Será necessário 24 galão(ões) de tinta e preço total é de R$ 600.0
-    Misturando, 5 lata(s) e 1 galão(ões) e o preço total é 425.0
-    >>> total_de_latas_e_ou_galoes_de_tinta(250)
-    Metragem informada: 250.0
-    Será necessário 3 lata(s) de tinta e preço total é de R$ 240.0
-    Será necessário 12 galão(ões) de tinta e preço total é de R$ 300.0
-    Misturando, 2 lata(s) e 3 galão(ões) e o preço total é 235.0
-
-    :param metragem: string
-    """
+     Considerando que cada lata custa R$ 25.0"""
 
     metragem = 0 if metragem == '' else float(metragem)
     litros = metragem / 6
@@ -49,6 +35,7 @@ def total_de_latas_e_ou_galoes_de_tinta(metragem):
     latas = floor(litros / 18)
     litros -= latas * 18
     galoes = ceil(litros / 3.6)
+
     print(f'Misturando, {latas} lata(s) e {galoes} galão(ões) e o preço total é {latas * 80.0 + galoes * 25.0}')
 
 

@@ -3,16 +3,7 @@ usando a seguinte fórmula: (72.7*altura) - 58"""
 
 
 def peso_ideal(h):
-    """Utiliza a fórmula (72.7 * h) - 58 para calcular o peso ideal
-
-    >>> peso_ideal(1.69)
-    64.863
-    >>> peso_ideal(1.55)
-    54.685
-
-    :param h: string
-    :return: float
-    """
+    """Utiliza a fórmula (72.7 * h) - 58 para calcular o peso ideal"""
 
     return 72.7 * float(h) - 58
 

@@ -2,16 +2,7 @@
 
 
 def metro_para_centimetro(s):
-    """Converte um número em metros retorna seu valor em centímetros
-
-    >>> metro_para_centimetro(1)
-    100
-    >>> metro_para_centimetro(0)
-    0
-
-    :param s: string
-    :return: integer
-    """
+    """Converte um número em metros retorna seu valor em centímetros"""
 
     return int(s) * 100
 

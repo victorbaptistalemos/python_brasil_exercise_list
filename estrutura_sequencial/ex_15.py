@@ -13,25 +13,7 @@ Formato de resposta:
 
 
 def calcular_salario(valor_hora, total_hora):
-    """Calcula o salário com base no valor da hora e quantidade trabalhadas
-
-    >>> calcular_salario(15.0, 220.0)
-    + Salário Bruto : R$ 3300.0
-    - IR (11%) : R$ 363.0
-    - INSS (8%) : R$ 264.0
-    - Sindicato (5%) : R$ 165.0
-    = Salário Liquido : R$ 2508.0
-    >>> calcular_salario(20.0, 175.0)
-    + Salário Bruto : R$ 3500.0
-    - IR (11%) : R$ 385.0
-    - INSS (8%) : R$ 280.0
-    - Sindicato (5%) : R$ 175.0
-    = Salário Liquido : R$ 2660.0
-
-    :param valor_hora:
-    :param total_hora:
-    :return:
-    """
+    """Calcula o salário com base no valor da hora e quantidade trabalhadas"""
 
     _IRRF = .11  # Imposto de Renda Retido na Fonte
     _INSS = .08  # Instituto Nacional do Seguro Social

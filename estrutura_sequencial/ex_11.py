@@ -5,16 +5,7 @@
 
 
 def calculos_variados():
-    """Realiza cálculos variados a partir da digitação de 3 valores
-
-    >>> calculos_variados()
-    Digite o primeiro valor (inteiro): 3
-    Digite o segundo valor (inteiro): 2
-    Digite o terceiro valor (número real): 1.5
-    O produto do dobro do primeiro com metade do segundo é 3.0
-    A soma do triplo do primeiro com o terceiro é 10.5
-    O terceiro elevado ao cubo é 3.375
-    """
+    """Realiza cálculos variados a partir da digitação de 3 valores"""
 
     primeiro = input("Digite o primeiro valor (inteiro): ")
     primeiro = 0 if primeiro == '' else int(primeiro)

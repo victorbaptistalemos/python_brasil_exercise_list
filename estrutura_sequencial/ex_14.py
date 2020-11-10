@@ -6,17 +6,7 @@ na variável multa o valor da multa que João deverá pagar. Imprima os dados do
 
 
 def calcular_multa(s):
-    """Informa a quantidade de kg excedente e a multa a ser paga
-
-    >>> calcular_multa(49)
-    Não há excedente de peso.
-    Não há multa a ser paga.
-    >>> calcular_multa(55)
-    Quantidade de quilos excedente: 5.0
-    Valor da multa a ser paga: R$ 20.0
-
-    :param s: string
-    """
+    """Informa a quantidade de kg excedente e a multa a ser paga"""
 
     excesso = 0.0 if s == '' or float(s) < 50.0 else float(s) - 50.0
     multa = 4.0 * excesso
