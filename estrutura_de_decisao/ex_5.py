@@ -10,21 +10,7 @@ def calcular_media_escolar(nota_1, nota_2):
     Retorna uma mensagem de erro se a nota estiver fora da faixa.
     Retorna "Aprovado com Distinção" se a média for 10.0.
     Retorna "Aprovado" se a média for maior que 7.0 inclusive.
-    Retorna "Reprovado" se a média for menor que 7.0 exclusive.
-
-    >>> print(calcular_media_escolar(11, 10))
-    A(s) nota(s) que você informou está(ão) inválida(s).
-    >>> print(calcular_media_escolar(10, 10))
-    Aprovado com Distinção
-    >>> print(calcular_media_escolar(7.0, 7))
-    Aprovado
-    >>> print(calcular_media_escolar(6.9, 7.0))
-    Reprovado
-
-    :param nota_1: float
-    :param nota_2: float
-    :return: string
-    """
+    Retorna "Reprovado" se a média for menor que 7.0 exclusive."""
 
     nota_1 = float(nota_1)
     nota_2 = float(nota_2)

@@ -2,16 +2,7 @@
 
 
 def sinal_do_numero(numero):
-    """Retorna "Positivo" ou "Negativo" de acordo com o valor dado.
-
-    >>> print(sinal_do_numero(1))
-    Positivo
-    >>> print(sinal_do_numero(-1))
-    Negativo
-
-    :param numero: float
-    :return: string
-    """
+    """Retorna "Positivo" ou "Negativo" de acordo com o valor dado."""
 
     numero = 0 if numero == '' else float(numero)
     return 'Negativo' if numero < 0 else 'Positivo'

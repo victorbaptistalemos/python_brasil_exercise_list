@@ -2,16 +2,7 @@
 
 
 def maior_numero(*args):
-    """Retorna o maior número a partir de uma lista de números.
-
-    >>> print(maior_numero(-1, -2.0, -3))
-    -1.0
-    >>> print(maior_numero(9))
-    9.0
-
-    :param args: tuple
-    :return: float
-    """
+    """Retorna o maior número a partir de uma lista de números."""
 
     numero_maior = float(args[0])
 

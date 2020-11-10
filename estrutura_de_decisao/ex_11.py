@@ -14,27 +14,7 @@ e lhe contraram para desenvolver o programa que calculará os reajustes.
 
 
 def aumento_salarial(valor):
-    """Detalha o valor do aumento salarial
-
-    >>> aumento_salarial(250)
-    Salário antigo: R$ 250.0
-    Percentual de ajuste aplicado: 20.0%
-    Valor do aumento salarial: R$ 50.0
-    Novo salário: R$ 300.0
-    >>> aumento_salarial(500)
-    Salário antigo: R$ 500.0
-    Percentual de ajuste aplicado: 15.0%
-    Valor do aumento salarial: R$ 75.0
-    Novo salário: R$ 575.0
-    >>> aumento_salarial(750)
-    Salário antigo: R$ 750.0
-    Percentual de ajuste aplicado: 10.0%
-    Valor do aumento salarial: R$ 75.0
-    Novo salário: R$ 825.0000000000001
-
-    :param valor:
-    :return:
-    """
+    """Detalha o valor do aumento salarial"""
     valor = float(valor)
     print(f'Salário antigo: R$ {valor}')
 

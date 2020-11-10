@@ -2,16 +2,7 @@
 
 
 def maior_e_menor_numero(*args):
-    """Retorna o maior número a partir de uma lista de números.
-
-    >>> print(maior_e_menor_numero(-1, -2.0, -3))
-    O maior número é -1.0 e o menor é -3.0
-    >>> print(maior_e_menor_numero(9, 10))
-    O maior número é 10.0 e o menor é 9.0
-
-    :param args: tuple
-    :return: string
-    """
+    """Retorna o maior número a partir de uma lista de números."""
 
     maior_numero = float(args[0])
     menor_numero = float(args[0])

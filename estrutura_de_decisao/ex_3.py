@@ -3,19 +3,7 @@ Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido."""
 
 
 def seletor_de_sexo(sexo):
-    """Retorna "Masculino", "Feminino" ou "Sexo Inválido".
-
-    >>> print(seletor_de_sexo('m'))
-    Masculino
-    >>> print(seletor_de_sexo('F'))
-    Feminino
-    >>> print(seletor_de_sexo(''))
-    Sexo Inválido
-
-
-    :param sexo: string
-    :return: string
-    """
+    """Retorna "Masculino", "Feminino" ou "Sexo Inválido"."""
 
     sexo = ' ' if sexo == '' else str.upper(sexo[0])
 

@@ -2,10 +2,7 @@
 
 
 def vogal_ou_consoante():
-    """ Retorna "Vogal" ou "Consoante"
-
-    :return: string
-    """
+    """ Retorna "Vogal" ou "Consoante\""""
 
     teste = input("Digite uma letra: ")
 
