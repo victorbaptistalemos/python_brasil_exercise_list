@@ -9,7 +9,7 @@ def qual_turno():
     turnos = {'M': 'Bom dia!', 'V': 'Boa Tarde!', 'N': 'Boa noite!'}
 
     # Ao invés de utilizar uma cadeia de if elif else, utilizei uma pesquisa de dicionário
-    if turnos.__contains__(turno):
+    if turno in turnos:
         print(turnos[turno])
     else:
         print('Valor Inválido!')
