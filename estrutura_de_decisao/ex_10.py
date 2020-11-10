@@ -8,10 +8,10 @@ def qual_turno():
 
     turnos = {'M': 'Bom dia!', 'V': 'Boa Tarde!', 'N': 'Boa noite!'}
 
-    # Ao invés de utilizar uma cadeia de if elif else, utilizei uma pesquisa de dicionário
-    if turno in turnos:
+    # Aprimorando para try except (Foge ao proposto if elif else)
+    try:
         print(turnos[turno])
-    else:
+    except KeyError:
         print('Valor Inválido!')
 
 
