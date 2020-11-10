@@ -40,9 +40,9 @@ def aumento_salarial(valor):
 
     if valor <= 280.0:
         ajuste = .2
-    elif 280.0 < valor <= 700.0:
+    elif valor <= 700.0:
         ajuste = .15
-    elif 700 < valor <= 1_500.0:
+    elif valor <= 1_500.0:
         ajuste = .1
     else:
         ajuste = .05
