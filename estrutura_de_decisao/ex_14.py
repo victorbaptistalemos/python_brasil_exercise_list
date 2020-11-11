@@ -11,9 +11,32 @@ o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou 
 ou “REPROVADO” se o conceito for D ou E."""
 
 
-def calcular_media(nota_1, nota_2):
-    nota_1 = float(nota_1)
-    nota_2 = float(nota_2)
+def receber_notas():
+    nota_1 = -1.0
+    nota_2 = -1.0
+
+    error = True
+    while not 0.0 <= nota_1 <= 10.0 or error:
+        try:
+            nota_1 = float(input("Digite a primeira nota: "))
+            error = False
+        except ValueError:
+            nota_1 = -1.0
+
+    error = not error
+    while not 0.0 <= nota_2 <= 10.0 or error:
+        try:
+            nota_2 = float(input("Digite a segunda nota: "))
+            error = False
+        except ValueError:
+            nota_2 = -1.0
+
+    return nota_1, nota_2
+
+
+def calcular_media():
+    nota_1, nota_2 = receber_notas()
+
     conceitos = {4.0: 'E', 6.0: 'D', 7.5: 'C', 9.0: 'B', 10.0: 'A'}
 
     media = (nota_1 + nota_2) / 2
@@ -26,7 +49,8 @@ def calcular_media(nota_1, nota_2):
 
     print(f'Primeira nota:\t{nota_1:>5.2f}')
     print(f'Segunda nota:\t{nota_2:>5.2f}')
-    print(f'Conceito:\t\t{conceito}')
+    print(f'Média:\t\t\t{media:>5.2f}')
+    print(f'Conceito:\t\t{conceito:>5}')
 
     if conceito == 'A' or 'B' or 'C':
         print('APROVADO')
@@ -35,4 +59,4 @@ def calcular_media(nota_1, nota_2):
 
 
 if __name__ == '__main__':
-    calcular_media(input("Digite a primeira nota: "), input('Digite a segunda nota: '))
+    calcular_media()
