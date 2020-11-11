@@ -13,10 +13,10 @@ def dia_da_semana(numero):
                    '6': 'Sexta-feira',
                    '7': 'Sábado'}
 
-    if numero in br_day_week:
+    try:
         print(br_day_week[numero])
-    else:
-        print("Valor inválido")
+    except KeyError:
+        print('Valor inválido')
 
 
 if __name__ == '__main__':
