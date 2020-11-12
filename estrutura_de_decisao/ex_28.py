@@ -23,11 +23,18 @@ def recolher_dados():
         except ValueError:
             pass
 
-    quantidade = 0
+    quantidade = -1
 
     while not quantidade > 0:
+        quantidade = input('Informe a quantidade a ser comprada: ')
         try:
-            quantidade = float(input('Informe a quantidade a ser comprada: '))
+            quantidade = float(quantidade)
+        except ValueError:
+            pass
+        try:
+            if type(quantidade) is float:
+                continue
+            quantidade = int(quantidade)
         except ValueError:
             pass
 
