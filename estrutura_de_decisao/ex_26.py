@@ -15,8 +15,15 @@ calcule e imprima o valor a ser pago pelo cliente sabendo-se que
 def quantidade_e_tipo():
     quantidade = 0
     while not quantidade > 0:
+        quantidade = input('Informe a quantidade de litros a ser vendido: ')
         try:
-            quantidade = float(input('Informe a quantidade de litros a ser vendido: '))
+            quantidade = float(quantidade)
+        except ValueError:
+            pass
+        try:
+            if type(quantidade) is float:
+                continue
+            quantidade = int(quantidade)
         except ValueError:
             pass
     tipo = ''
