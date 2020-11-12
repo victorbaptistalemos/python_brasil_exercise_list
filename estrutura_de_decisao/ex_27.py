@@ -10,30 +10,32 @@ e escreva o valor a ser pago pelo cliente."""
 
 
 def morango_e_maca():
-    morango = 0
-    while not morango > 0:
+    morango = -1
+    while not morango >= 0:
+        morango = input('Informe a pesagem dos morangos: ')
         try:
-            morango = float(input('Informe a pesagem dos morangos: '))
-            break
+            morango = float(morango)
         except ValueError:
             pass
         try:
-            morango = int(input('Informe a pesagem dos morangos: '))
-            break
+            if type(morango) is float:
+                continue
+            morango = int(morango)
         except ValueError:
             pass
 
-    maca = 0
+    maca = -1
 
-    while not maca > 0:
+    while not maca >= 0:
+        maca = input('Informe a pesagem dos morangos: ')
         try:
-            maca = float(input('Informe a pesagem das maçãs: '))
-            break
+            maca = float(maca)
         except ValueError:
             pass
         try:
-            maca = int(input('Informe a pesagem das maçãs: '))
-            break
+            if type(maca) is float:
+                continue
+            maca = int(maca)
         except ValueError:
             pass
 
