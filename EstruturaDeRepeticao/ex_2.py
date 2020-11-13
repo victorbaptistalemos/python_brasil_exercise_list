@@ -13,11 +13,11 @@ def credenciais():
             while senha == '':
                 senha = input('Digite a senha: ')
             if usuario == senha:
-                raise UserWarning
-        except UserWarning:
+                raise UserWarning('Os nomes de usuário e senha são iguais, tente novamente')
+        except UserWarning as e:
             usuario = ''
             senha = ''
-            print('Os nomes de usuário e senha são iguais, tente novamente')
+            print(e)
 
 
 if __name__ == '__main__':
