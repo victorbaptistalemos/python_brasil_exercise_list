@@ -12,49 +12,45 @@ def cadastro():
         try:
             nome = input('Digite o seu nome: ')
             if len(nome) <= 3:
-                raise UserWarning
-        except UserWarning:
+                raise UserWarning(f'O nome "{nome}" é muito curto, tente novamente')
+        except UserWarning as e:
             nome = ''
-            print('O nome é muito curto, tente novamente')
+            print(e)
 
     idade = -1
     while not 0 <= idade <= 150:
+        idade = input('Digite a sua idade: ')
         try:
-            idade = int(input('Digite a sua idade: '))
+            idade = int(idade)
             if not 0 <= idade <= 150:
-                raise UserWarning
+                raise UserWarning(f'A idade {idade} não é válida, digite entre 0 e 150, tente novamente')
+        except UserWarning as e:
+            print(e)
         except ValueError:
-            print('Você digitou uma idade inválida, tente novamente')
-        except UserWarning:
+            print(f'O valor {idade} é inválido, a idade deve ser um número inteiro entre 0 e 150, tente novamente')
             idade = -1
-            print('Você digitou uma idade fora da faixa permitida [0-150], tente novamente')
 
     salario = 0
     while not salario > 0:
         salario = input('Digite o valor do salário: ')
         try:
-            salario = int(salario)
-        except ValueError:
-            pass
-        try:
-            salario = float(salario)
-
+            salario = round(float(salario), 2)
             if not salario > 0:
-                raise UserWarning
+                raise UserWarning(f'O salário deve ser maior que 0, você digitou {salario}, tente novamente')
         except ValueError:
             salario = 0
             print('Você digitou um valor de salário inválido, tente novamente')
-        except UserWarning:
-            print('Você digitou um valor de salário fora da faixa permitida [Salário > 0], tente novamente')
+        except UserWarning as e:
+            print(e)
 
     sexo = ''
+    tupla_sexo = ('f', 'm')
     print('Informe seu sexo: [f = Feminino][m = Masculino]')
-    while sexo != 'f' and sexo != 'm':
+    while sexo == '':
+        sexo = str.lower(input('[f/m]: '))
         try:
-            sexo = str.lower(input('[f/m]: '))
-            if sexo != 'f' and sexo != 'm':
-                raise UserWarning
-        except UserWarning:
+            tupla_sexo.index(sexo)
+        except ValueError:
             sexo = ''
             print('Erro de digitação, tente novamente')
 
@@ -62,10 +58,8 @@ def cadastro():
     tupla_estado_civil = ('c', 'd', 's', 'v')
     print('Informe seu estado civil: [c = Casado][d = Divorciado][s = Solteiro][v = Viúvo]')
     while estado_civil == '':
+        estado_civil = str.lower(input('[c/d/s/v]: '))
         try:
-            estado_civil = str.lower(input('[c/d/s/v]: '))
-            if len(estado_civil) > 1:
-                raise ValueError
             tupla_estado_civil.index(estado_civil)
         except ValueError:
             estado_civil = ''
